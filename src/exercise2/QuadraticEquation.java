@@ -3,34 +3,32 @@ import java.util.Scanner;
 
 public class QuadraticEquation {
   public static void main(String[] args) {
-    System.out.println("Start");
-    System.out.print ("a:");
-    System.out.print ("b:");
-    System.out.print ("c:");
     Scanner input= new Scanner(System.in);
-    
-    double a = input.nextInt();
-    
-     double b= input.nextInt();
-   
+    System.out.print("a= ");
+     double a = input.nextInt();
+  System.out.print("b= ");
+    double b =input.nextInt();
+    System.out.print("c= ");
      double c= input.nextInt();
-
-     double x;
-     double equation = (a*x*x + b*x + c = 0);
-     double D = b*b - 4*a*c;
-     double X1 = (-b + Math.sqrt(D)) / 2*a;
-      double X2 = (-b - Math.sqrt(D)) / 2*a;
+    
      if(a!=0) {
+        double D= (b * b) - (4 * a * c) ;
        if(D>=0) {
-       System.out.println("x1= "+ X1);
-       System.out.println("x2= "+ X2);
+         double rootD = Math.sqrt(D);
+         double x1= ((-b + rootD) / (2 * a ));
+         double x2= ((-b - rootD) / (2 * a)) ;
+         System.out.println("x1= " + x1 + ", x2= "+x2);
+         
+       
        }else {
-         System.out.println("Imagenary values");
+         System.out.println("Imagynari values");
+    
        }
 
-     }else {
-       if(b!=0){
-         System.out.println("x1= "+ X1);
+     }else if(b!=0){
+       double x3= (-c)/b;
+       System.out.println("x= " + x3);
+         
        }else {
          if (c!=0) {
            System.out.println("No values");
@@ -42,6 +40,5 @@ public class QuadraticEquation {
 
 
        }
-       
-     }
+      
    

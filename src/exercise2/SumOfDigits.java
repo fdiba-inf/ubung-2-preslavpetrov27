@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class SumOfDigits {
 
     public static void main(String[] args) {
+      Scanner input = new Scanner(System.in);
       System.out.print("eine Zahl zwischen 0 und 999 eingeben: ");
-        Scanner input = new Scanner(System.in);
+        
         int number=input.nextInt();
         int d1= number%10;
         int a=number/10;
